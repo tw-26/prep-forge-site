@@ -1,0 +1,16 @@
+{
+  "name": "elevixapps-site",
+  "private": true,
+  "type": "module",
+  "description": "Static site for elevixapps.com, served by GitHub Pages.",
+  "scripts": {
+    "export:uscis": "node scripts/export-uscis-data.mjs",
+    "build": "node scripts/build-site.mjs",
+    "render:assets": "node scripts/render-assets.mjs",
+    "serve": "node scripts/serve.mjs",
+    "all": "node scripts/export-uscis-data.mjs && node scripts/build-site.mjs && node scripts/render-assets.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
