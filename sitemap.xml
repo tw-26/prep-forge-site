@@ -21,6 +21,21 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://elevixapps.com/rankbound/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://elevixapps.com/rankbound/terms.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://elevixapps.com/rankbound/privacy.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://elevixapps.com/uscis/terms.html</loc>
     <lastmod>2026-08-12</lastmod>
     <priority>0.3</priority>

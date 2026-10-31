@@ -26,6 +26,7 @@ if (!chrome) {
 const types = {
   ".css": "text/css",
   ".html": "text/html; charset=utf-8",
+  ".jpg": "image/jpeg",
   ".js": "text/javascript",
   ".json": "application/json",
   ".png": "image/png",
@@ -66,6 +67,14 @@ await run([
   `${base}/scripts/assets/og-citizen-ready.html`
 ]);
 console.log("Rendered assets/og/citizen-ready.png");
+
+await run([
+  "--window-size=1200,630",
+  "--virtual-time-budget=3000",
+  `--screenshot=${join(root, "assets/og/rankbound.png")}`,
+  `${base}/scripts/assets/og-rankbound.html`
+]);
+console.log("Rendered assets/og/rankbound.png");
 
 const pdfs = [
   { page: "/uscis/civics-questions/", out: "uscis/128-civics-questions-and-answers.pdf" },
