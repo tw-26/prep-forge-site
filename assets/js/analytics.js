@@ -1,4 +1,4 @@
-// Cookieless PostHog analytics for the Citizen Ready web pages.
+// Cookieless PostHog analytics for the app pages (Citizen Ready, Rankbound).
 // persistence: "memory" means nothing is stored in the visitor's browser.
 (function () {
   var POSTHOG_KEY = "phc_ziCkk3JUPLGfTniKkKduM8bsgt5XJbZDEuqe7wtYAEc6";
@@ -20,7 +20,9 @@
     capture_pageview: true,
     disable_session_recording: true
   });
-  window.posthog.register({ platform: "web", site_section: "uscis", lang: document.documentElement.lang });
+  // site_section is the first path segment: "uscis", "rankbound", ...
+  var section = location.pathname.split("/")[1] || "home";
+  window.posthog.register({ platform: "web", site_section: section, lang: document.documentElement.lang });
 
   window.crTrack = function (event, properties) {
     window.posthog.capture(event, properties || {});
