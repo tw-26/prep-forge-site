@@ -45,6 +45,9 @@ const staticPages = [
   { path: "/sierra-math/index.html", file: "sierra-math/index.html", priority: "0.9" },
   { path: "/sierra-math/terms.html", file: "sierra-math/terms.html", priority: "0.3" },
   { path: "/sierra-math/privacy.html", file: "sierra-math/privacy.html", priority: "0.3" },
+  { path: "/rankbound/", file: "rankbound/index.html", priority: "0.9" },
+  { path: "/rankbound/terms.html", file: "rankbound/terms.html", priority: "0.3" },
+  { path: "/rankbound/privacy.html", file: "rankbound/privacy.html", priority: "0.3" },
   { path: "/uscis/terms.html", file: "uscis/terms.html", priority: "0.3" },
   { path: "/uscis/privacy.html", file: "uscis/privacy.html", priority: "0.3" },
   { path: "/support.html", file: "support.html", priority: "0.3" }
