@@ -13,7 +13,7 @@ Marketing and legal site for **Elevix Apps** at https://elevixapps.com. Plain st
 |---|---|---|---|
 | Citizen Ready: USCIS Prep | `uscis/` | **Generated** by `scripts/build-site.mjs`, except `uscis/terms.html` and `uscis/privacy.html` | id `6778953719` |
 | Sierra Math (California K-5 math) | `sierra-math/` | Hand-written (`index.html`, `terms.html`, `privacy.html`) | id `6797675240` |
-| Rankbound: Workout RPG | `rankbound/` | Hand-written (`index.html`, `terms.html`, `privacy.html`) | **Not live yet.** Links use placeholder `id0000000000` / `app-id=0000000000` in `rankbound/index.html`; replace all of them with the real Apple ID |
+| Rankbound: Workout RPG | `rankbound/` | Hand-written (`index.html`, `terms.html`, `privacy.html`) | id `6827804631` (CTA links carry `ct=rankbound-<placement>`) |
 
 Shared pages: `index.html` (hub with one `app-card` per app), `support.html` (Tally form; never put an email address on the site), `privacy.html` / `terms.html` at the root are legacy redirects to the USCIS versions.
 
