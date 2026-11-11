@@ -6,8 +6,8 @@ export const APP_STORE_ID = "6778953719";
 export const OG_IMAGE = "/assets/og/citizen-ready.png";
 
 // `ct` shows up in App Store Connect > Analytics > Sources, so each placement gets its own value.
-export function appStoreUrl(campaign) {
-  return `https://apps.apple.com/app/apple-store/id${APP_STORE_ID}?pt=129018838&ct=${encodeURIComponent(campaign)}&mt=8`;
+export function appStoreUrl(campaign, appId = APP_STORE_ID) {
+  return `https://apps.apple.com/app/apple-store/id${appId}?pt=129018838&ct=${encodeURIComponent(campaign)}&mt=8`;
 }
 
 export function esc(value) {

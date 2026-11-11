@@ -76,6 +76,14 @@ await run([
 ]);
 console.log("Rendered assets/og/rankbound.png");
 
+await run([
+  "--window-size=1200,630",
+  "--virtual-time-budget=3000",
+  `--screenshot=${join(root, "assets/og/rankbound-tools.png")}`,
+  `${base}/scripts/assets/og-rankbound-tools.html`
+]);
+console.log("Rendered assets/og/rankbound-tools.png");
+
 const pdfs = [
   { page: "/uscis/civics-questions/", out: "uscis/128-civics-questions-and-answers.pdf" },
   { page: "/uscis/es/preguntas-de-ciudadania/", out: "uscis/128-preguntas-de-la-ciudadania.pdf" }

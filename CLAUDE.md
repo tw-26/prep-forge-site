@@ -23,9 +23,13 @@ Adding a new app: create `<app>/index.html`, `terms.html`, `privacy.html`, put i
 
 Never hand-edit generated HTML under `uscis/` (`practice-test/`, `civics-questions/`, `questions/`, `citizenship-test-guide/`, `es/`, `index.html`). Change the templates in `scripts/site/` and rebuild. See `README.md` for the data export flow.
 
+**Rankbound tool pages are generated too**: `rankbound/workout-generator/`, `rankbound/push-up-calculator/`, `rankbound/workouts/*`, `rankbound/guides/*`. Never hand-edit them. Change `scripts/rankbound/pages.mjs` (copy, FAQ, samples) or `templates.mjs`, then run `npm run build:rankbound`. The workout engine and UI live in `assets/rankbound/tools/*.js` (plain ES modules, no dependencies, used by both the build and the browser). Strategy, page inventory and measurement are in `docs/marketing/pseo-*.md`. `npm test` fails if the committed pages are stale.
+
 ```sh
 npm run serve          # local preview at http://localhost:8080 (node scripts/serve.mjs [port])
 npm run build          # regenerates all USCIS pages AND sitemap.xml
+npm run build:rankbound # regenerates the Rankbound tool pages only (no USCIS diff)
+npm test               # node:test suites in tests/ (engine, calculators, page SEO, sitemap, copy rules)
 npm run render:assets  # headless Chrome: OG images and the two USCIS PDFs
 ```
 
@@ -52,6 +56,6 @@ npm run render:assets  # headless Chrome: OG images and the two USCIS PDFs
 
 ## Copy rules
 
-- **Rankbound:** never use "Solo Leveling" (or its characters) in Rankbound's branding, taglines, landing page, or App Store metadata, and never imply an official association. The franchise may be referenced only in separate editorial articles targeting those searches. Positioning leads with RPG progression over fitness tracking; one CTA, "Download Free on the App Store", with "No account. No subscription required. Just train and level up." No fitness outcome claims ("build muscle", "lose weight"). The player is the character (there is no avatar). Free with no ads or IAP at launch; paid features may come in v1.1+, so update its privacy policy and terms before they ship.
+- **Rankbound:** never use "Solo Leveling" (or its characters) in Rankbound's branding, taglines, landing page, or App Store metadata, and never imply an official association. The franchise may be referenced only in separate editorial articles targeting those searches. Today that is only `rankbound/guides/one-punch-man-workout/` (One Punch Man, nominative use, no imagery, no-affiliation notice); other pages and the landing page link to it with a neutral label and a test enforces this. Tool pages must never say a workout syncs or imports into the app: it does not. Positioning leads with RPG progression over fitness tracking; one CTA, "Download Free on the App Store", with "No account. No subscription required. Just train and level up." No fitness outcome claims ("build muscle", "lose weight"). The player is the character (there is no avatar). Free with no ads or IAP at launch; paid features may come in v1.1+, so update its privacy policy and terms before they ship.
 - **Privacy policies** must match what the app really does. Rankbound collects no data (no analytics, network calls, or permissions); Sierra Math only processes purchase data via Apple/RevenueCat. Verify against the app's code before changing a policy.
 - App source repos live next to this one: `../prep-forge/apps/uscis`, `../prep-forge/apps/california-math`, `../rankbound` (its `marketing/` folder has App Store screenshots and `docs/` has the PRD and release checklist).

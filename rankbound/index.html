@@ -36,6 +36,7 @@
     <link rel="preload" as="image" href="../assets/rankbound/ss1.jpg" fetchpriority="high">
     <link rel="stylesheet" href="../styles.css">
     <script src="/assets/js/analytics.js" defer></script>
+    <script src="/assets/rankbound/nav.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -154,7 +155,13 @@
           <img src="../assets/rankbound/icon.png" alt="" width="512" height="512">
           <span>Rankbound</span>
         </a>
-        <a class="rb-header-cta" href="https://apps.apple.com/app/apple-store/id6827804631?pt=129018838&amp;ct=rankbound-header&amp;mt=8" data-cta="rankbound-header">Download Free</a>
+        <div class="rb-header-actions">
+          <div class="rb-menu" data-rb-menu>
+            <button class="rb-header-link rb-menu-toggle" type="button" aria-expanded="false" aria-controls="rb-tools-menu">Free Tools<svg class="rb-menu-caret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <nav class="rb-menu-panel" id="rb-tools-menu" aria-label="Free tools"><ul><li class="rb-menu-group"><span class="rb-menu-label">Plan a workout</span><ul><li><a href="/rankbound/workout-generator/">Workout generator</a></li><li><a href="/rankbound/push-up-calculator/">Push-up calculator</a></li></ul></li><li class="rb-menu-group"><span class="rb-menu-label">Workouts</span><ul><li><a href="/rankbound/workouts/30-day-calisthenics-challenge/">30-day calisthenics challenge</a></li><li><a href="/rankbound/workouts/no-equipment-workout/">No-equipment workout</a></li><li><a href="/rankbound/workouts/15-minute-workout/">15-minute workout</a></li><li><a href="/rankbound/workouts/anime-workout/">Anime workout generator</a></li></ul></li><li class="rb-menu-group"><span class="rb-menu-label">Guides</span><ul><li><a href="/rankbound/guides/one-punch-man-workout/">The 100-rep daily routine, scaled</a></li></ul></li></ul></nav>
+          </div>
+          <a class="rb-header-cta" href="https://apps.apple.com/app/apple-store/id6827804631?pt=129018838&amp;ct=rankbound-header&amp;mt=8" data-cta="rankbound-header">Download Free</a>
+        </div>
       </div>
     </header>
 
@@ -368,6 +375,26 @@
         </div>
       </section>
 
+      <section class="rb-section rb-tools-link" aria-labelledby="tools-heading">
+        <div class="rb-shell">
+          <p class="rb-kicker">Free Training Tools</p>
+          <h2 id="tools-heading">Plan a Workout Before You Download</h2>
+          <p class="rb-section-lead">
+            Free bodyweight tools that work right in your browser, with no sign-up. Use them to plan a
+            session, then build a similar Daily Quest in Rankbound.
+          </p>
+          <ul class="rb-related">
+            <li><a class="rb-panel rb-related-card" href="/rankbound/workout-generator/"><strong>Workout generator</strong><span>Pick your level, time and equipment and get a ready-to-do workout plus a weekly schedule.</span></a></li>
+            <li><a class="rb-panel rb-related-card" href="/rankbound/push-up-calculator/"><strong>Push-up calculator</strong><span>Enter your best set and get a conservative 4-week push-up plan with the right variation.</span></a></li>
+            <li><a class="rb-panel rb-related-card" href="/rankbound/workouts/30-day-calisthenics-challenge/"><strong>30-day calisthenics challenge</strong><span>A 30-day bodyweight challenge with rest days built in, scaled to your level and schedule.</span></a></li>
+            <li><a class="rb-panel rb-related-card" href="/rankbound/workouts/no-equipment-workout/"><strong>No-equipment workout</strong><span>A bodyweight-only workout for your level, with easier and harder versions of every move.</span></a></li>
+            <li><a class="rb-panel rb-related-card" href="/rankbound/workouts/15-minute-workout/"><strong>15-minute workout</strong><span>A quick bodyweight routine with the sets, rest and timing worked out.</span></a></li>
+            <li><a class="rb-panel rb-related-card" href="/rankbound/workouts/anime-workout/"><strong>Anime workout generator</strong><span>Four original training styles for RPG fans, each with its own bodyweight workout.</span></a></li>
+            <li><a class="rb-panel rb-related-card" href="/rankbound/guides/one-punch-man-workout/"><strong>The 100-rep daily routine, scaled</strong><span>The famous 100/100/100 plus 10 km routine, scaled so you can start where you are.</span></a></li>
+          </ul>
+        </div>
+      </section>
+
       <section class="rb-section" aria-labelledby="faq-heading">
         <div class="rb-shell rb-faq">
           <h2 id="faq-heading">Frequently Asked Questions</h2>
@@ -446,6 +473,7 @@
     <footer class="rb-footer">
       <div class="rb-shell">
         <nav aria-label="Rankbound links">
+          <a href="workout-generator/">Free tools</a>
           <a href="terms.html">Terms</a>
           <a href="privacy.html">Privacy</a>
           <a href="../support.html">Support</a>
